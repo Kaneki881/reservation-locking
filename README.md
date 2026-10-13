@@ -1,6 +1,7 @@
 # TP — Réservations et verrouillage optimiste
 
 Projet Maven autonome utilisant JPA 2.2 (`javax.persistence`), Hibernate 5.4.30.Final et H2 2.3.232 en mémoire. Aucun serveur MySQL n'est nécessaire.
+<img width="1329" height="760" alt="image" src="https://github.com/user-attachments/assets/52956d15-4f57-472f-9ac9-8eba4e650fe7" />
 
 ## Lancer
 
@@ -16,6 +17,8 @@ Ou avec Maven disponible dans `PATH` :
 mvn test
 ```
 Resultat 
+<img width="1278" height="815" alt="image" src="https://github.com/user-attachments/assets/c8b6ca62-fe3b-451b-b7f6-9b8446f95df6" />
+
 Le test crée une réservation, lit deux copies avec la même version, valide la première modification, vérifie le conflit de la deuxième, puis réessaie cette deuxième modification après rechargement. La console montre également les requêtes SQL Hibernate contenant `where id=? and version=?`.
 
 Les classes `com.example.ConcurrentReservationSimulator` et `com.example.ConcurrentReservationWithRetry` fournissent chacune une méthode `main` exécutable depuis un IDE.
